@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
     <style>
         html{
            
@@ -62,6 +63,7 @@ gap: 1rem;
     transition: 0.2s ease-out;
   }
   .heading{
+    z-index: 1;
     display: flex;
     justify-content: center;
     color: rgb(238, 237, 249);
@@ -72,21 +74,47 @@ gap: 1rem;
   }
   .desc
   {
+    z-index: 1;
     margin: 10px 0;
     color: rgb(238, 237, 249);
     font-size: 4vw;
     font-weight: 500;
     font-family: Inter;
   }
+    .twitter-tweet
+    {
+        z-index: 1;
+    }
   blockquote
   {
+    
     z-index: 1;
     max-width: 700px;
     width: 95vw;
+    
   }
+  .fullScreen { 
+    width: 100%;
+    height: 100%; 
+    position: absolute;
+  /* z-index: 2; */
+  pointer-events: none;
+  
+}
+
+#canvas2d
+{
+ /* width: 100%;
+ height: 100%; */
+ width: fit-content;
+ height: 100vh;
+}
     </style>
 </head>
 <body>
+    <div class="fullScreen" id="fullScreen">
+        <canvas id="canvas2d"></canvas>
+    </div>
     <div class="d1">
         <div><br><br><br></div>
         <p class="heading">Boundless</p>
@@ -101,7 +129,12 @@ gap: 1rem;
         <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">⌘F for your entire screen! Keyword search across all visible windows. <a href="https://t.co/OWMU4vRKJi">pic.twitter.com/OWMU4vRKJi</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1659310678270955520?ref_src=twsrc%5Etfw">May 18, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <!-- <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">⌘F for your entire screen! Keyword search across all visible windows. <a href="https://t.co/OWMU4vRKJi">pic.twitter.com/OWMU4vRKJi</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1659310678270955520?ref_src=twsrc%5Etfw">May 18, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
         <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I&#39;ve been prototyping ways to interact with AI that feel more natural than text-in, text-out.<br><br>Watch me communicate by talking and &quot;pointing&quot; to things on my screen.<br><br>(Volume up!) <a href="https://t.co/zA7qYC6UbZ">pic.twitter.com/zA7qYC6UbZ</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1655080871022690307?ref_src=twsrc%5Etfw">May 7, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+        <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Controlling the desktop with natural language! <a href="https://t.co/nNpu8Nqlo9">pic.twitter.com/nNpu8Nqlo9</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1652354053312061444?ref_src=twsrc%5Etfw">April 29, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">This is Iris, an AI with the sense of sight. You can chat about anything on your screen.<br><br>Waitlist: <a href="https://t.co/BGKXcfMwbt">https://t.co/BGKXcfMwbt</a> <a href="https://t.co/sk4odRH2yJ">pic.twitter.com/sk4odRH2yJ</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1645649290193416193?ref_src=twsrc%5Etfw">April 11, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">Generating mini macOS apps with natural language! <a href="https://t.co/mAK1EaBqyJ">pic.twitter.com/mAK1EaBqyJ</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1641318606549176321?ref_src=twsrc%5Etfw">March 30, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <blockquote class="twitter-tweet" data-theme="dark"><p lang="en" dir="ltr">I’m creating a search engine that remembers everything on your screen and lets you ask abstract questions over all your data.<br><br>Not only that, I’ve developed AI that re-opens any indexed content in its original app.<br><br>Watch Boundless retrieve an Apple note with its virtual cursor: <a href="https://t.co/UiAHZoKZTG">pic.twitter.com/UiAHZoKZTG</a></p>&mdash; Ronith (@ronithhh) <a href="https://twitter.com/ronithhh/status/1634278433168711680?ref_src=twsrc%5Etfw">March 10, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
     </div>
+    <script src="starfield.js"></script>
 </body>
 </html>
