@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel = "stylesheet" href = "style.css">
+  </head>
+  <body>
+    <div class="fullScreen" id="fullScreen">
+      <canvas id="canvas2d"></canvas>
+    </div>
+    <div class="d1">
+      <div><br /><br /><br /></div>
+      <p class="heading">Fortune</p>
+      <p class="desc">Ai autocomplete, anywhere</p>
+      <div><br /><br /><br /><br /><br /></div>
+      <button>Waitlist</button>
+    </div>
+    <div class = "inner-container"> 
+    <div class = "container"> 
+    <div class = "d2">
+        
+        <form class = "form">
+                <div class = "text-field">
+                <h2 style="margin-bottom: 40px;">John Waitlist</h2>
+                </div>
+                <input type="text" class = "name" placeholder="Full Name" style="margin-bottom: 20px;">
+                <input type="text" class = "email" placeholder="Email" style="margin-bottom: 20px;">
+                <input type="text" class = "twitter-handle" placeholder="Twitter-handle" style="margin-bottom: 20px;">
+                <button type = "submit" class = "submit">Submit</button>
+        </form>
+
+    </div>
+    </div>
+    </div>
+    <script src="starfield.js"></script>
+    <script>
+        document.querySelector('.form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var submitButton = document.querySelector('.submit');
+    submitButton.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        Success!
+    `;
+
+    submitButton.style.display = 'flex';
+    submitButton.style.alignItems = 'center';
+    submitButton.style.gap = '8px';
+    submitButton.style.color = 'rgb(164, 145, 240)';
+    submitButton.style.fontSize = '20px';
+    submitButton.style.fontWeight = '600';
+    submitButton.style.backgroundColor = 'transparent';
+});
+    </script>
+  </body>
+</html>
