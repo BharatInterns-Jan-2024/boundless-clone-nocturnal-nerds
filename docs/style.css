@@ -14,7 +14,6 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
 button {
   z-index: 1;
   padding: 12px 60px;
@@ -38,7 +37,6 @@ button:hover {
   color: rgb(238, 237, 249);
   font-size: 8vw;
   font-weight: 600;
-
   margin: 10px 0;
 }
 .desc {
@@ -73,13 +71,14 @@ button:hover {
   align-items: center;
   height: 100vh;
 }
+h2{
+  margin-top: 0;
+}
 
 .d2 {
   z-index: 1;
   display: flex;
-
   align-items: center;
-
   justify-content: center;
   flex-direction: column;
   width: 70vw;
@@ -98,8 +97,15 @@ button:hover {
 }
 .text-field {
   color: rgb(238, 237, 249);
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 600;
+  font-family: Inter;
+}
+input ::placeholder{
+  color: white;
+}
+input:focus {
+  border-color: rgb(83, 30, 214);
 }
 .name,
 .email,
@@ -115,4 +121,19 @@ button:hover {
   font-family: Inter;
   outline: none;
   transition: all 0.2s ease-out 0s;
+}
+.submit{
+   display: inline-flex;
+    padding: 10px 30px;
+    background-color: rgb(83, 30, 214);
+    border-radius: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Inter;
+    text-decoration: none;
+    transition: all 0.2s ease-out 0s;
+    outline: none;
+    border: none;
+    user-select: none;
 }
